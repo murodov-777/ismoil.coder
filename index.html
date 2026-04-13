@@ -11,8 +11,6 @@
             --accent-1: #ff00cc;
             --accent-2: #3333ff;
             --accent-3: #00ffcc;
-            --accent-4: #1ef0c6;
-            --accent-5: #990e0e;
             --glass: rgba(255, 255, 255, 0.05);
         }
 
@@ -69,16 +67,8 @@
             border-bottom: 1px solid rgba(255,255,255,0.1);
         }
 
-        .logo { font-weight: 900; font-size: 1.5rem; letter-spacing: 2px; }
-
-
-        
-        .mini-name {
-            font-weight: 600;
-            font-size: 1rem;
-            letter-spacing: 1px;
-        }
-
+        .logo { font-weight: 900; font-size: 3rem; letter-spacing: 2px; }
+        .logo { font-weight: 500; font-size: 1.2rem; letter-spacing: 1.5px; }
 
         /* Тағйирот дар Hero Section */
         .hero {
@@ -117,21 +107,18 @@
         }
         
         .hero-text h1 { 
-            font-size: clamp(2rem, 4vw, 2.7rem); 
+            font-size: clamp(1.5rem, 3vw, 2rem); 
             line-height: 1.2; 
             margin-bottom: 20px; 
         }
-
-        .hero-text h2 { 
-            font-size: clamp(1rem, 3vw, 1.7rem); 
-            line-height: 1.2; 
-            margin-bottom: 10px; 
-        }
         
         .hero-text span { 
-            background: linear-gradient(40deg, var(--accent-5), var(--accent-4)); 
+            background: linear-gradient(90deg, var(--accent-1), var(--accent-3)); 
             -webkit-background-clip: text; 
-            -webkit-text-fill-color: transparent; 
+            -webkit-text-fill-color: transparent;
+            font-weight: 900;
+            font-size: 1.5rem;
+            letter-spacing: 2px;
         }
 
         .section-title {
@@ -213,17 +200,16 @@
     <div class="container">
         <nav>
             <div class="logo">PYTHON.DEV</div>
-            <div class="mini-name">@ismoil.coder</div>
+            <div class="logo">@ismoil.coder</div>
         </nav>
 
         <section class="hero">
             <div class="profile-wrapper reveal">
-                <img src="https://i.postimg.cc/CxbbXwhD/Murodov-Ismoil.jpg" alt="Акси Ман" class="profile-img">
+                <img src="https://i.postimg.cc/CxbbXwhD/Murodov-Ismoil.jpg" alt="My photo" class="profile-img">
             </div>
 
             <div class="hero-text reveal">
-                <h2>Murodov Ismoil</h2>
-                <h1>Ман Ботҳои муосир барои <span>Бизнес</span> месозам</h1>
+                <h1>Ман Ботҳои <span>Муосир</span> барои Бизнес месозам</h1>
                 <p style="color: #aaa; font-size: 1.1rem; line-height: 1.6;">
                     Аз автоматикунонии оддӣ то системаҳои мураккаб. <br>
                     Ман ба шумо кӯмак мекунам, ки тиҷорататонро дар Telegram 24/7 фаъол нигоҳ доред.
@@ -238,28 +224,33 @@
         <div class="projects-grid">
             <div class="project-card reveal">
                 <div class="icon" style="font-size: 2rem; margin-bottom: 15px;">🛒</div>
-                <h3>Онлайн Бизнес</h3>
-                <p>Боти мағозаи онлайн бо панели админ. Беҳтарин барои фурӯши молҳо.</p>
+                <h3>E-Commerce Bot</h3>
+                <p>Боти мағозаи онлайн бо сабад, пардохти онлайн ва панели админ. Беҳтарин барои фурӯши молҳо.</p>
                 <a href="https://t.me/your_bot_1" class="demo-link">Санҷидан</a>
             </div>
 
-
+            <div class="project-card reveal">
+                <div class="icon" style="font-size: 2rem; margin-bottom: 15px;">📅</div>
+                <h3>Booking Service</h3>
+                <p>Системаи автоматии навбатпоӣ барои сартарошхонаҳо, клиникаҳо ва тарабхонаҳо.</p>
+                <a href="https://t.me/your_bot_2" class="demo-link">Санҷидан</a>
+            </div>
 
             <div class="project-card reveal">
                 <div class="icon" style="font-size: 2rem; margin-bottom: 15px;">🤖</div>
-                <h3>Бизнес</h3>
-                <p>Боти дорои мини приложени барои ҳисоб кардани расход ва даход.</p>
-                <a href="https://t.me/@financetracker3_bot" class="demo-link">Санҷидан</a>
+                <h3>AI Assistant</h3>
+                <p>Боти дорои зеҳни сунъӣ (ChatGPT API) барои ҷавоб додан ба саволҳои муштариёни шумо.</p>
+                <a href="https://t.me/your_bot_3" class="demo-link">Санҷидан</a>
             </div>
         </div>
 
         <footer>
             <h3>Биёед якҷоя кор кунем!</h3>
             <div class="social-icons" style="margin-top: 30px;">
-                <a href="https://instagram.com/ismoil.coder" target="_blank"><i class="fab fa-instagram"></i></a>
-                <a href="https://t.me/ismoilvscode" target="_blank"><i class="fab fa-telegram"></i></a>
+                <a href="https://instagram.com/..." target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://t.me/..." target="_blank"><i class="fab fa-telegram"></i></a>
             </div>
-            <p style="margin-top: 40px; font-size: 0.8rem; color: #555;">© 2026 Бо ҳам дунёро месозем.</p>
+            <p style="margin-top: 40px; font-size: 0.8rem; color: #555;">© 2026 Ҳамаи ҳуқуқҳо ҳифз шудаанд.</p>
         </footer>
     </div>
 
