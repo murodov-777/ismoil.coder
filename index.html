@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="tg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Python Developer Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --bg: #050505;
+            --accent-1: #ff00cc;
+            --accent-2: #3333ff;
+            --accent-3: #00ffcc;
+            --accent-4: #1ef0c6;
+            --accent-5: #990e0e;
+            --glass: rgba(255, 255, 255, 0.05);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: #fff;
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+        }
+
+        .background {
+            position: fixed;
+            width: 100vw;
+            height: 100vh;
+            z-index: -1;
+            background: radial-gradient(circle at 0% 0%, #111 0%, #050505 100%);
+        }
+
+        .orb {
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            border-radius: 50%;
+            filter: blur(120px);
+            opacity: 0.4;
+            z-index: -1;
+            animation: move 15s infinite alternate;
+        }
+
+        @keyframes move {
+            0% { transform: translate(-10%, -10%); background: var(--accent-1); }
+            50% { transform: translate(30%, 20%); background: var(--accent-2); }
+            100% { transform: translate(-20%, 40%); background: var(--accent-3); }
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .logo { font-weight: 900; font-size: 1.5rem; letter-spacing: 2px; }
+
+
+        
+        .mini-name {
+            font-weight: 600;
+            font-size: 1rem;
+            letter-spacing: 1px;
+        }
+
+
+        /* Тағйирот дар Hero Section */
+        .hero {
+            display: flex;
+            flex-direction: column; /* Сурат дар боло, матн дар поён */
+            align-items: center;
+            justify-content: center;
+            padding: 60px 0;
+            text-align: center; /* Матн дар марказ */
+            gap: 30px;
+        }
+
+        .profile-wrapper {
+            position: relative;
+            width: 250px;
+            height: 250px;
+        }
+
+        .profile-img {
+            width: 100%;
+            height: 100%;
+            border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+            object-fit: cover;
+            border: 5px solid var(--accent-3);
+            animation: morph 8s ease-in-out infinite;
+            box-shadow: 0 0 30px rgba(0, 255, 204, 0.2);
+        }
+
+        @keyframes morph {
+            0%, 100% { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; }
+            50% { border-radius: 50% 50% 20% 80% / 25% 80% 20% 75%; }
+        }
+
+        .hero-text { 
+            max-width: 800px; 
+        }
+        
+        .hero-text h1 { 
+            font-size: clamp(2rem, 4vw, 2.7rem); 
+            line-height: 1.2; 
+            margin-bottom: 20px; 
+        }
+
+        .hero-text h2 { 
+            font-size: clamp(1rem, 3vw, 1.7rem); 
+            line-height: 1.2; 
+            margin-bottom: 10px; 
+        }
+        
+        .hero-text span { 
+            background: linear-gradient(40deg, var(--accent-5), var(--accent-4)); 
+            -webkit-background-clip: text; 
+            -webkit-text-fill-color: transparent; 
+        }
+
+        .section-title {
+            text-align: center;
+            margin: 60px 0 40px;
+            font-size: 2rem;
+            color: var(--accent-3);
+            text-transform: uppercase;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .project-card {
+            background: var(--glass);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 20px;
+            padding: 25px;
+            transition: 0.4s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--accent-1);
+            background: rgba(255,255,255,0.08);
+        }
+
+        .project-card h3 { margin-bottom: 15px; color: var(--accent-3); }
+        .project-card p { font-size: 0.9rem; color: #ccc; line-height: 1.6; }
+
+        .demo-link {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 25px;
+            background: linear-gradient(45deg, var(--accent-1), var(--accent-2));
+            border-radius: 50px;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            font-size: 0.85rem;
+            transition: 0.3s;
+        }
+
+        .demo-link:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(255, 0, 204, 0.3);
+        }
+
+        footer {
+            text-align: center;
+            padding: 60px 0;
+            margin-top: 100px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .social-icons a {
+            font-size: 2.2rem;
+            margin: 0 20px;
+            color: white;
+            transition: 0.3s;
+        }
+
+        .social-icons a:hover { color: var(--accent-3); transform: translateY(-5px); }
+
+        .reveal { opacity: 0; transform: translateY(30px); transition: 1s all ease; }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+
+    </style>
+</head>
+<body>
+
+    <div class="background"><div class="orb"></div></div>
+
+    <div class="container">
+        <nav>
+            <div class="logo">PYTHON.DEV</div>
+            <div class="mini-name">@ismoil.coder</div>
+        </nav>
+
+        <section class="hero">
+            <div class="profile-wrapper reveal">
+                <img src="/Murodov Ismoil.jpg" alt="Акси Ман" class="profile-img">
+            </div>
+
+            <div class="hero-text reveal">
+                <h2>Murodov Ismoil</h2>
+                <h1>Ман Ботҳои муосир барои <span>Бизнес</span> месозам</h1>
+                <p style="color: #aaa; font-size: 1.1rem; line-height: 1.6;">
+                    Аз автоматикунонии оддӣ то системаҳои мураккаб. <br>
+                    Ман ба шумо кӯмак мекунам, ки тиҷорататонро дар Telegram 24/7 фаъол нигоҳ доред.
+                </p>
+                <br>
+                <a href="#projects" class="demo-link">Ботҳои сохтаи ман</a>
+            </div>
+        </section>
+
+        <h2 id="projects" class="section-title reveal">Лоиҳаҳои Демо (Ботҳо)</h2>
+        
+        <div class="projects-grid">
+            <div class="project-card reveal">
+                <div class="icon" style="font-size: 2rem; margin-bottom: 15px;">🛒</div>
+                <h3>Онлайн Бизнес</h3>
+                <p>Боти мағозаи онлайн бо панели админ. Беҳтарин барои фурӯши молҳо.</p>
+                <a href="https://t.me/your_bot_1" class="demo-link">Санҷидан</a>
+            </div>
+
+
+
+            <div class="project-card reveal">
+                <div class="icon" style="font-size: 2rem; margin-bottom: 15px;">🤖</div>
+                <h3>Бизнес</h3>
+                <p>Боти дорои мини приложени барои ҳисоб кардани расход ва даход.</p>
+                <a href="https://t.me/@financetracker3_bot" class="demo-link">Санҷидан</a>
+            </div>
+        </div>
+
+        <footer>
+            <h3>Биёед якҷоя кор кунем!</h3>
+            <div class="social-icons" style="margin-top: 30px;">
+                <a href="https://instagram.com/ismoil.coder" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://t.me/ismoilvscode" target="_blank"><i class="fab fa-telegram"></i></a>
+            </div>
+            <p style="margin-top: 40px; font-size: 0.8rem; color: #555;">© 2026 Бо ҳам дунёро месозем.</p>
+        </footer>
+    </div>
+
+    <script>
+        function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 150;
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add("active");
+                }
+            }
+        }
+        window.addEventListener("scroll", reveal);
+        reveal();
+    </script>
+</body>
+</html>
